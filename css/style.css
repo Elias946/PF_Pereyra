@@ -1,0 +1,414 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink-700: #C2185B;
+    --pink-500: #E91E63;
+    --pink-200: #F48FB1;
+}
+
+
+@font-face {
+    font-family: PinyonScript-Regular;
+    src: url(../assets/fonts/PinyonScript-Regular.ttf);
+}
+
+nav ul li {
+    text-decoration: no;
+    display: inline;
+}
+
+body {
+   
+    background-color: var(--pink-200);
+    min-height: 100%;
+}
+
+/* main {
+    overflow: hidden;
+    min-height: 100vh;
+    text-align: center;
+
+} */
+
+h1 {
+    font-family: PinyonScript-Regular;  
+}
+
+/* header {
+    width: 100%;
+    margin-bottom: 5px;
+    border-bottom: 1px solid white;
+    max-height: 80px;
+    top: 0;
+    position: fixed;
+} */
+
+.bg-body-tertiary{
+    background-color: var(--pink-500);
+}
+
+/* .nav-bar {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    
+    color: #eee;
+}
+ */
+
+/* .nav-link {
+    text-decoration: none;
+    
+    font-size: 2rem;
+    width: auto;
+} */
+
+/* .nav-item{
+    width: 50%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+} */
+
+/* .nav-link {
+    text-decoration: none;
+    color: #eee;
+} */
+
+.title {
+    margin-left: 50px;
+    font-size: 3rem;
+    font-family: PinyonScript-Regular;
+}
+
+.title-icon {
+    display: inline-flex;
+    color: rgb(255, 255, 255);
+    content: url(../assets/icons/icon-cake.svg);
+    width: 3rem;
+}
+
+
+
+
+.content{
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.card {
+    width: 100%;
+    height: 500px;
+    margin: 10px;
+    display: inline-block;
+    justify-content: center;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    box-shadow: 2px 10px 10px black;
+    border: 1px solid rgb(0, 0, 0);
+    overflow: hidden;
+}
+.card img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+
+}
+
+.card:hover {
+
+    transition: all 0.5s;
+    background-image: linear-gradient(rgb(255, 255, 255), var(--pink-500));
+    transform: scale(0.9);
+    color: #eee;
+    border: 1px solid white;
+    box-shadow: 2px 10px 10px white;
+
+}
+
+.card_body {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2+vh;
+    overflow: hidden;
+}
+
+
+.card_body_galery img {
+    border-radius: 40px;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+
+}
+
+.card_body_galery {
+
+    margin: 15px;
+    display: inline-block;
+    width: 20%;
+    background-color: var(--pink-200);
+}
+
+.card_body_recipes {
+    margin: 15px;
+    display: inline-block;
+    width: 80%;
+    max-height: 300px;
+    background-color: var(--pink-200);
+}
+
+.card_body_recipes img {
+
+    width: 80%;
+    max-height: 300px;
+    height: 400px;
+    object-fit: cover;
+
+}
+
+
+.about {
+    margin: 0 85px 0 90px;
+    display: inline-block;
+    width: 80%;
+    color: #eee;
+    text-align: justify;
+}
+
+.about_img {
+    width: 80%;
+}
+
+.card_body_form {
+
+    margin: 15px;
+
+    display: block;
+    max-height: 300px;
+    background-color: white;
+}
+
+input[type=text],
+[type=email] {
+    width: 100%;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    height: 60px;
+    background-color: #eee;
+
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+    color: rgb(255, 255, 255);
+}
+
+input[type=text]:focus,
+[type=email]:focus,
+textarea:focus {
+    color: white;
+    background-color: #C2185B;
+}
+
+textarea {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #eee;
+    width: 100%;
+}
+
+.form {
+    display: inline-block;
+    width: 600px;
+}
+
+.btn {
+    width: 100%;
+    height: 60px;
+    display: block;
+    margin: 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.btn-pink-700 {
+    color: #eee;
+    background-color: var(--pink-700);
+}
+
+.btn-pink-700:hover {
+    transition: all 0.5s;
+    background-image: linear-gradient(var(--pink-700), var(--pink-500));
+    border: 2px var(white) solid;
+}
+
+label {
+    text-align: left;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+}
+
+footer .nav-bar {
+    background-color: var(--pink-700);
+}
+
+footer .nav-bar .nav-item {
+    text-align: center;
+}
+
+.container-menu{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas:
+    "c2 c1 c1 c3"
+    "c4 c1 c1 c5";
+
+
+}
+
+.card-menu {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    justify-content: center;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+  
+}
+.card-menu img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    background-color: red;
+}
+
+.card__body-menu{
+   
+    position: absolute;
+    width: 100%;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    bottom:0;
+    font-size: 0;
+    background-color: rgba(255, 255, 255, 0);
+    transition: height 0.5s;
+   
+}
+.card-menu:hover .card__body-menu{
+    font-size: 2rem;
+    color: black;
+    width: 100%;
+    height: 20%;    
+}
+.card-menu:hover img{
+    transition: 0.5s;
+    width: 100%;
+    height: 80%;
+}
+
+.card-menu:hover {
+    background-color: #eee;
+    transition: all 0.5s;
+    color: #000000;
+}
+
+.c1{
+    grid-area: c1;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+
+    border: 10px solid transparent;
+ }
+ 
+
+.c2{
+    grid-area: c2;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 10px solid transparent;
+}
+.c3{
+    grid-area: c3;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 10px solid transparent;
+}
+.c4{
+    grid-area: c4;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 10px solid transparent;
+}
+.c5{
+    grid-area: c5;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 10px solid transparent;
+}
+
+.history{
+    height: 100vh;
+    width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+    .container-menu{
+        width: 100%;
+        height: 90vh;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(4,1fr);
+        grid-template-areas:
+        "c1"
+        "c2"
+        "c3"
+        "c4"
+        "c5";
+    
+    }
+    
+}
+/* .sm_foooter{
+width: 49%;
+display: inline-block;
+text-align:right;
+color: #eee;
+max-height: 60px;
+} */
+/* div{
+display:none;
+} */
