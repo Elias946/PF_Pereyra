@@ -1,0 +1,7 @@
+$font_title: PinyonScript-Regular;
+$link_icon: "../assets/icons/icon-cake.svg";
+
+@font-face {
+    font-family: $font_title;
+    src: url(../assets/fonts/#{$font_title}.ttf);
+}

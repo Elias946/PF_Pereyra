@@ -1,0 +1,265 @@
+@import "colores";
+@import "reset";
+@import "var-link";
+@import "media-querys";
+/////////////////////////////--- MODIFICACIONES HTML BOOTSTRAP INICIO ---/////////////////////////////
+.bg-body-tertiary{
+    background-color: $pink-500;
+}
+
+.btn-primary{
+    width: 100%;
+    background-color: $pink-700;
+    border-color: white;
+    &:hover{
+        background-color: white;
+        border-color: $pink-700;
+        color: $pink-700;
+    }
+}
+
+/////////////////////////////--- MODIFICACIONES HTML BOOTSTRAP INICIO ---/////////////////////////////
+
+/////////////////////////////--- MODIFICACIONES HTML BASICO INICIO ---/////////////////////////////
+nav{
+    ul{
+        li{
+            text-decoration: none;
+            display: inline;
+        }
+    }
+}
+body {
+    background-color: $pink-200;
+}
+h1{
+    font-family: $font_title;
+}
+/////////////////////////////--- MODIFICACIONES HTML BASICO FIN ---/////////////////////////////
+
+/////////////////////////////---AQUI  ESTA EL INICIO INDEX.HTML----/////////////////////////////
+.title{
+    margin-left: 50px;
+    font-size: 3rem;
+    font-family: $font_title;
+}
+
+.title-icon{
+    display: inline-flex;
+    color: white;
+    content: url(#{$link_icon});
+    width: 3rem;
+}
+
+.container-menu{
+    width: 100%;
+    height: calc(100vh - 70px);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas:
+    'c2 c1 c1 c3'
+    'c4 c1 c1 c5';
+
+
+    .card-menu{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        justify-content: center;
+        background-color: transparent;
+        color: rgb(0, 0, 0);
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit:cover;
+            background-color: red;
+        }
+
+        .card__body-menu{
+   
+            position: absolute;
+            width: 100%;
+            height: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            bottom:0;
+            font-size: 0;
+            background-color: rgba(255, 255, 255, 0);
+            transition: height 0.5s;
+           
+        }
+
+        &:hover{
+            background-color: #eee;
+            transition: all 0.5s;
+            color: #000000;
+            
+            img{
+                transition: 0.5s;
+                width: 100%;
+                height: 80%;
+            }
+
+            .card__body-menu{
+                font-size: 2rem;
+                color: black;
+                width: 100%;
+                height: 20%; 
+            }
+            
+
+        }  
+    }
+
+    @for $i from 1 through 5{
+        .c#{$i}{
+            grid-area: c#{$i};
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            border: 10px solid transparent;
+        }
+    }
+   
+}
+/////////////////////////////---AQUI  ESTA EL FIN DE INDEX.HTML----/////////////////////////////
+
+
+////////////////////////////--- AQUI  ESTA EL INICIO DE RECETAS.HTML----////////////////////////
+
+
+
+
+
+////////////////////////////--- AQUI ESTA EL FIN DE RECETAS.HTML---/////////////////////////////
+
+
+/////////////////////////////---AQUI  ESTA EL INICIO DE GALERIA.HTML----/////////////////////////
+
+.card{
+    width: 100%;
+    height: 500px;
+    margin: 10px;
+    display: inline-block;
+    justify-content: center;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    box-shadow: 2px 10px 10px black;
+    border: 1px solid rgb(0, 0, 0);
+    overflow: hidden;
+
+    img{
+        width: 100%;
+        height: 80%;
+        object-fit: cover;
+    }
+
+    .card_body{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 2vh;
+        overflow: hidden;
+    }
+
+    &:hover{
+        transition: all 0.5s;
+        background-image: linear-gradient(rgb(255, 255, 255), var(--pink-500));
+        transform: scale(0.9);
+        color: #eee;
+        border: 1px solid white;
+        box-shadow: 2px 10px 10px white;
+    }
+}
+
+/////////////////////////////---AQUI  ESTA EL FIN DE GALERIA.HTML----////////////////////////////
+
+/////////////////////////////---Aqui ESTA EL PRINCIPIO DE RECIPE----/////////////////////////////
+.card_recipe{
+    width: 100%;
+    height: 500px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+
+    .img_recipe{
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card_body_recipe{
+        width: 100%;
+        height: 500px;
+        border: solid 1px black;
+        text-align: center;
+        .card_recipe_text{
+            text-align: justify;
+            height: 390px;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space:pre-line;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .btn-primary{
+            width: 95%;
+        }
+        h5{
+            border-bottom: 1px solid black;
+        }
+        
+    }
+}
+/////////////////////////////---AQUI ESTA EL FIN DE RECIPE----///////////////////////////////////
+
+/////////////////////////////---AQUI ESTA EL INICIO DE CONTACTO----//////////////////////////////
+
+.form{
+    margin: 30px;
+    width: 400px;
+    .form-control{
+        &:focus{
+            border-color: $pink-700;
+            box-shadow: 0 0 0 0.25rem $pink-700-transparent;
+        }
+    }
+}
+
+/////////////////////////////---AQUI ESTA EL FIN DE CONTACTO----/////////////////////////////////
+
+
+
+@media only screen and (max-width: $breackpoint-768){
+    .container-menu{
+        width: 100%;
+        height: 90vh;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(4,1fr);
+        grid-template-areas:
+        "c1"
+        "c2"
+        "c3"
+        "c4"
+        "c5";
+    }
+
+    .card_recipe{
+        flex-direction: column;
+        .img_recipe{
+            width: 100%;
+        }
+    }
+    
+}
+
+
+

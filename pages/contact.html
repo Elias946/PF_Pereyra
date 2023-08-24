@@ -3,92 +3,92 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Contacto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Main</title>
 </head>
 
 <body>
     <header>
-        <nav class="nav-bar">
-            <div class="nav-item">
-                <a class=" nav-link title " href="../index.html">
-                    <span class="title-icon"></span>Magic Cake
-                </a>
-            </div>
-            <div class="nav-item">
-                <ul>
-                    <li>
-                        <a class="nav-link" href="../index.html">
-                            Inicio |
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="galery.html">
-                            Galeria |
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="about.html">
-                            Sobre Mi |
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="recipes.html">
-                            Recetas |
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="contact.html">
-                            Contacto
-                        </a>
-                    </li>
-                </ul>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid">
+                <div class="nav-item">
+                    <a class="nav-link title" href="../index.html">
+                        <span class="title-icon col-0"></span>
+                        <div class="d-none d-md-inline">
+                            magic cake
+                        </div>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse float-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="galery.html">Galery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Historia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="recipes.html">Recetas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contacto</a>
+                        </li>
+                    </ul>
+
+                </div>
             </div>
         </nav>
     </header>
-    <main class="">
-      <section>
-        <form class="form" action="">
-            <label for=" nombre"> Nombre</label>
-            <input type="text" name="nombre" class="card_body_form" id="nombre" placeholder="Alex">
-            <hr>
-            <label for="apellido"> Apellido</label>
-            <input type="text" name="apellido" class="card_body_form" id="apellido" placeholder="Cake">
-            <hr>
-            <label for="Email">Email</label>
-            <input type="email" name="correo" class="card_body_form" id="correo" placeholder="example@email.com">
-            <hr>
-            <textarea name="escribe" id="" class="card_body_form" cols="30" rows="10" placeholder="Escribe"></textarea>
-            <button type="submit" class="btn btn-pink-700">Enviar</button>
-        </form>
-      </section>
+    <main class="container">
+        <section class="row justify-content-center">
+            <form class="form" action="">
+                <label for=" nombre" class="form-label"> Nombre</label>
+                <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Alex">
+                <label for="apellido" class="form-label"> Apellido</label>
+                <input type="text" name="apellido" class="form-control" id="apellido" placeholder="Cake">
+                <label for="Email" class="form-label">Email</label>
+                <input type="email" name="correo" class="form-control" id="correo" placeholder="example@email.com">
+                <label for="escribe" class="form-label">Escribe lo que quieras</label>
+                <textarea name="escribe" id="" class="form-control" cols="30" rows="10"
+                    placeholder="Escribe"></textarea>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </section>
     </main>
-    <footer>
-        <nav class="nav-bar">
-            <div class="nav-item">
-              
-            </div>
-            <div class="nav-item">
-                <ul>
-                    <li>
-                        <a class="nav-link" href="../index.html">
-                            Facebook |
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="galery.html">
-                            Twitter |
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="about.html">
-                            Youtube
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <footer class="navbar navbar-expand-lg bg-body-tertiary mt-auto">
+        <!-- Copyright -->
+        <div class="text-center p-3">
+            © 2020 Copyright:
+        </div>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 right">
+            <li class="nav-item">
+                <a class="nav-link" href="../index.html">
+                    Facebook |
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="galery.html">
+                    Twitter |
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">
+                    Youtube
+                </a>
+            </li>
+        </ul>
+        <!-- Copyright -->
     </footer>
 </body>
 
